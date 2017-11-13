@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<!--Linking CSS reset -->
+<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+<!--Linking CSS style-->
+	<!--Bootstrap-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+	<!--Stylesheet-->
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!--Linking jQuery-->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+	<title>Crystals Collector!</title>
+</head>
+<body id="background">
+	<div id="container fluid">
+		<!--Game title-->
+		<div class="row">
+			<div class="col-sm-6">
+				<h1 id="gameTitle">Crystals Collector!</h1>
+			</div>
+			<div class="col-sm-6">
+			</div>
+		</div>
+
+		<!--Instructions-->
+		<div class="row" id="instructions">
+			<div class="col-sm-12">
+				<p>
+					You will be given a random number at the start of the game.
+				</p>
+				<p>
+					There are four crystals. By clicking on a crystal, you will add a specific amount of points to your total socre.
+				</p>
+				<p>
+					You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.
+				</p>
+				<p>
+					The value of each crystal is hidden from you until you click on it.
+				</p>
+				<p>
+					Each time when the games starts, the game will change the values of each crystal.
+				</p>
+			</div>
+			<div class="col-sm-6">
+			</div>
+		</div>
+
+		<!--Random number and wins/losses tally-->
+		<div class="row">
+			<div class="col-sm-5" id="number">
+				<h3 id="randomNumber"></h3>
+			</div>
+			<div class="col-sm-2">
+			</div>
+			<div class="col-sm-5" id="tally">
+				<h3 id="wins">Wins: 0</h3>
+				<h3 id="losses">Losses: 0</h3>
+			</div>
+		</div>
+
+		<!--Crystals-->
+		<div class="row">
+			<div class="col-md-3">
+				<img src="assets/images/heart_jasper_crystal.jpg" class="img_responsive" id="heart">
+			</div>
+			<div class="col-md-3">
+				<img src="assets/images/pink_star_crystal.jpg" class="img_responsive" id="star">
+			</div>
+			<div class="col-md-3">
+				<img src="assets/images/oval_obsidian_crystal.jpg" class="img_responsive" id="oval">
+			</div>
+			<div class="col-md-3">
+				<img src="assets/images/tear_drop_purple_crystal.jpg" class="img_responsive" id="tear">
+			</div>
+		</div>
+
+		<!--Score-->
+		<div class="row" id="scoreStyle">
+			<div class="col-sm-12">
+				<p>
+					Your total score is:
+				</p>
+			</div>
+		</div>
+		<div class="row" id="scoreStyle">
+			<div class="col-sm-12">
+				<p id="score">0</p>
+			</div>
+		</div>
+	</div>
+
+<!--Linking JavaScript!-->
+<script src="assets/javascript/game.js"></script>
+</body>
+</html>

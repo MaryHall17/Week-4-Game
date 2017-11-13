@@ -1,0 +1,49 @@
+/*Background*/
+
+#background {
+	width: 920px;
+	background-color: #FFF8DC;
+	line-height: 22px;
+}
+
+/*Game title*/
+
+#gameTitle {
+	background-color: #8FBC8F;
+}
+
+/*Instructions*/
+
+#instructions {
+	background-color: #2F4F4F;
+	color: white;
+}
+
+
+/*Tally*/
+
+#number{
+	background-color: #2F4F4F;
+	color: white;
+}
+
+#tally {
+	background-color: #8FBC8F;
+	color: white;
+}
+/*Crystal sizes*/
+
+.img_responsive {
+	height: 225px;
+	width: 225px;
+}
+
+/*Score*/
+
+#scoreStyle {
+	background-color: #8FBC8F;
+	color: white;
+}
+
+
+
