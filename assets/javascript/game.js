@@ -4,11 +4,11 @@
 
 //Randomizer function for assignging values to the required number between 19-120
 
-//Set the floor for both randomizers so it's always possible for player to win
-
 //onClick event within function that compares value to number
 
 //adding function if first crystal is still below number
+
+//End Psuedo code
 
 //Randomizers for assigning values to crystals between 1 and 12:
 
@@ -29,8 +29,52 @@ function getRndInteger(min, max) {
 	return Math.floor(Math.random() * (max - min + 1) ) + min;
 };
 
-//Value assignment function on load for random number
-$(document).ready(function() {
+//Value assignment function on load for random number and crystals
+$(document).ready(function randomizeValues() {
 	$("#randomNumber").html(getRndInteger(19,120));
+	$("#heartValue").html(heart);
+	$("#starValue").html(star);
+	$("#ovalValue").html(oval);
+	$("#tearValue").html(tear);
 });
+
+
+//On click event that displays values of crystals, and knows to end the game if value goes above random number
+$(document).ready(function game() {
+	integer = parseInt($("#score"));
+	console.log(integer);
+	winning = parseInt($("#wins"));
+	losing = parseInt($("#losing"));
+	$(document).click(function button() {
+		//When user clicks a button, the value gets added to the score.
+		
+		//Winning and losing logic:
+		if (integer == score) {
+			$("#wins").html(winning ++);
+			alert("You win!");
+			integer = 0;
+			randomizeValues();
+		} else if (integer < score) {
+			//add score
+		} else {
+			$("#losses").html(losing ++);
+			alert("You lose!");
+			integer = 0;
+			randomizeValues();
+		};
+
+	});
+});
+
+
+
+
+
+
+
+//Value assignment fucntion on load for buttons
+// $(document).ready(function heartValue() {
+// 	$("#heartValue").html(heart);
+// });
+// console.log(heartValue());
 
