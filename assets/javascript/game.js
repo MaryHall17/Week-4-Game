@@ -41,35 +41,38 @@ $(document).ready(function randomizeValues() {
 
 //On click event that displays values of crystals, and knows to end the game if value goes above random number
 $(document).ready(function game() {
-	var integer = parseInt($("#score"));
-	var number = parseInt($("#randomNumber"));
-	console.log(integer);
+	var number = parseInt($("#randomNumber").text());
 	console.log(number);
-	var winning = parseInt($("#wins"));
-	var losing = parseInt($("#losing"));
+	var winning = parseInt($("#wins").text());
+	var losing = parseInt($("#losing").text());
 	//When user clicks a button, the value gets added to the score.
 	$("#heart").click(function heartClick() {
+		var integer = parseInt($("#score").text());
+		console.log(integer);
 		alert("heart is " + heart);
 		$("#score").html(heart + integer);
 		console.log(heart);
-		console.log(integer);
 			// Winning and losing logic:
 		// if (integer == number) {
 		// 	$("#wins").html(winning ++);
 		// 	alert("You win!");
 		// 	integer = 0;
-		// 	randomizeValues();
+		// 	// randomizeValues();
 		// } else if (integer < number) {
-		// 	//add score
+			
 		// } else {
 		// 	$("#losses").html(losing ++);
 		// 	alert("You lose!");
 		// 	integer = 0;
-		// 	randomizeValues();
+		// 	// randomizeValues();
 		// };
 	});
 	$("#star").click(function starClick() {
+		var integer = parseInt($("#score").text());
+		console.log(integer);
 		alert("star is " + star);
+		$("#score").html(star + integer);
+		console.log(star);
 			// Winning and losing logic:
 		// if (integer == score) {
 		// 	$("#wins").html(winning ++);
@@ -86,7 +89,11 @@ $(document).ready(function game() {
 		// };
 	});
 	$("#oval").click(function ovalClick() {
+		var integer = parseInt($("#score").text());
+		console.log(integer);
 		alert("oval is " + oval);
+		$("#score").html(oval + integer);
+		console.log(oval);
 			// Winning and losing logic:
 		// if (integer == score) {
 		// 	$("#wins").html(winning ++);
@@ -103,7 +110,11 @@ $(document).ready(function game() {
 		// };
 	});
 	$("#tear").click(function tearClick() {
+		var integer = parseInt($("#score").text());
+		console.log(integer);
 		alert("tear is " + tear);
+		$("#score").html(tear + integer);
+		console.log(tear);
 			// Winning and losing logic:
 		// if (integer == score) {
 		// 	$("#wins").html(winning ++);
