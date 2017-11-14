@@ -53,21 +53,27 @@ $(document).ready(function game() {
 		console.log(tally);
 		var winning = parseInt($("#wins").text());
 		var losing = parseInt($("#losses").text());
+		console.log(winning);
+		console.log(losing);
 			// Winning and losing logic:
 			if (tally == number) {
-				$("#wins").html(winning ++);
+				$("#wins").html(winning++);
 				alert("You win!");
-				integer = 0;
-				// number = getRndInteger(19, 120);
+				tally = 0;
+				randomizeValues();
 			} else if (tally < number) {
 				$("#score").html(heart + integer);
 			} else {
-				$("#losses").html(losing ++);
+				$("#losses").html(losing++);
 				alert("You lose!");
-				integer = 0;
-				// randomizeValues();
+				tally = 0;
+				randomizeValues();
 			};
-	});
+			//Sends wins/loss count to the html file and reset values.
+			$("#wins").html(winning);
+			$("#losses").html(losing);
+			$("#score").html(tally);
+		});
 	$("#star").click(function starClick() {
 		var integer = parseInt($("#score").text());
 		var number = parseInt($("#randomNumber").text());
@@ -78,18 +84,22 @@ $(document).ready(function game() {
 		console.log(star);
 			// Winning and losing logic:
 		if (tally == number) {
-			$("#wins").html(winning ++);
+			$("#wins").html(winning++);
 			alert("You win!");
-			integer = 0;
-			// randomizeValues();
+			tally = 0;
+			randomizeValues();
 		} else if (tally < number) {
 			$("#score").html(star + integer);
 		} else {
-			$("#losses").html(losing ++);
+			$("#losses").html(losing++);
 			alert("You lose!");
-			integer = 0;
-			// randomizeValues();
+			tally = 0;
+			randomizeValues();
 		};
+		//Sends wins/loss count to the html file and reset values.
+		$("#wins").html(winning);
+		$("#losses").html(losing);
+		$("#score").html(tally);
 	});
 	$("#oval").click(function ovalClick() {
 		var integer = parseInt($("#score").text());
@@ -101,43 +111,52 @@ $(document).ready(function game() {
 		console.log(tally);
 			// Winning and losing logic:
 		if (tally == number) {
-			$("#wins").html(winning ++);
+			$("#wins").html(winning++);
 			alert("You win!");
-			integer = 0;
-			// randomizeValues();
+			tally = 0;
+			randomizeValues();
 		} else if (tally < number) {
 			$("#score").html(oval + integer);
 		} else {
-			$("#losses").html(losing ++);
+			$("#losses").html(losing++);
 			alert("You lose!");
-			integer = 0;
-			// randomizeValues();
+			tally = 0;
+			randomizeValues();
 		};
+		//Sends wins/loss count to the html file and reset values.
+		$("#wins").html(winning);
+		$("#losses").html(losing);
+		$("#score").html(tally);
 	});
 	$("#tear").click(function tearClick() {
 		var integer = parseInt($("#score").text());
 		var number = parseInt($("#randomNumber").text());
 		var tally = parseInt($("#score").html (tear + integer).text());
 		var winning = parseInt($("#wins").text());
-		var losing = parseInt($("losses").text());
+		var losing = parseInt($("#losses").text());
 		alert("tear is " + tear);
 		console.log(tally);
 			// Winning and losing logic:
 		if (tally == number) {
-			$("#wins").html(winning ++);
+			$("#wins").html(winning++);
 			alert("You win!");
-			integer = 0;
-			// randomizeValues();
+			tally = 0;
+			randomizeValues();
 		} else if (tally < number) {
 			$("#score").html(tear + integer);
 		} else {
-			$("#losses").html(losing ++);
+			$("#losses").html(losing++);
 			alert("You lose!");
-			integer = 0;
-			// randomizeValues();
+			tally = 0;
+			randomizeValues();
 		};
+		//Sends wins/loss count to the html file and reset values.
+		$("#wins").html(winning);
+		$("#losses").html(losing);
+		$("#score").html(tally);
 	}); 	
-});
+}); 
+
 
 
 
